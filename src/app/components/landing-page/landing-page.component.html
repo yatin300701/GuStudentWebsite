@@ -1,0 +1,35 @@
+<div id="navbar">
+  <img src="../../../assets/Students.png" />
+  <ul [ngStyle]="getNavbarStyle()" >
+    <li id="clearicon"  (click)="showNavbar(false)"><mat-icon>clear</mat-icon></li>
+    <li routerLinkActive="active" routerLink="" [routerLinkActiveOptions]="{exact:true}" >Home</li>
+    <li routerLinkActive="active"  routerLink="past-year-papers">Past Year Papers</li>
+    <li>Notes</li>
+    <li>About Us</li>
+    <li id="signin"><button class="signin">Sign In</button></li>
+    <li id="signup"><button class="signup" >Sign Up</button></li>
+  </ul>
+  <div id="authButtons">
+    <button class="signin">Sign In</button>
+    <button class="signup">Sign Up</button>
+  </div>
+  <div id="menubuttons">
+    <mat-icon  fontIcon="menu" (click)="showNavbar(true)">menu</mat-icon>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+<footer>
+  <div id="footer">
+    <div id="copyright">
+      <span>&#169; 2023 Students Of Gurugram University</span>
+      
+    </div>
+    <div>
+      <span><img src="../../../assets/gu logo-modified.jpg" height="50px" style="border-radius: 5px;"/></span>
+    </div>
+    <div id="contact">
+      <span id="contect-info">Contact : &nbsp; <a href = "mailto: yatin300701@gmail.com">yatin300701@gmail.com</a></span>
+    </div>
+  </div>
+</footer>

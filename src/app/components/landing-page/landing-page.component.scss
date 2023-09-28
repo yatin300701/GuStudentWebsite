@@ -1,0 +1,254 @@
+// variables
+$color-red: #CB2717;
+
+$color-lightyellow: #dbc53e;
+$color-dakyellow: #b9752f;
+$color-black: #393939;
+
+
+// mixins
+@mixin heading {
+    font-size: 16px;
+}
+@mixin text {
+    font-size: 14px;
+}
+@mixin remove-space {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin flex-row-aligncenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-justifycenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-row-justifyspacebwtn {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@mixin flex-col-aligncenter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flex-col-justifycenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-col-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// functions
+
+// css
+#navbar {
+    @include heading();
+    font-weight: 500;
+    padding: 0px 40px;
+
+    @include flex-row-justifyspacebwtn();
+
+    img {
+        height: 80px;
+    }
+
+    ul {
+        @include flex-row-aligncenter();
+        gap: 50px;
+        list-style: none;
+        .active {
+            color: $color-red;
+            font-weight: 500
+        }
+        li {
+            cursor: pointer;
+        }
+        #clearicon {
+            display: none;
+        }
+        #signin {
+            display: none;
+        }
+        #signup {
+            display: none
+        }
+        .signin {
+            @include heading();
+            font-weight: 500;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        .signup {
+            @include heading();
+            font-weight: 500;
+            padding: 15px 30px;
+            color: white;
+            border: none;
+            background-color: $color-red;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+
+
+            &:hover {
+                background-color: #F9585B;
+            }
+
+        }
+
+    }
+
+    #authButtons {
+        @include flex-row-aligncenter();
+        gap: 40px;
+        .signin {
+
+            @include heading();
+            font-weight: 500;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        .signup {
+
+            @include heading();
+            font-weight: 500;
+            padding: 15px 30px;
+            color: white;
+            border: none;
+            background-color: $color-red;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+
+
+            &:hover {
+                background-color: #F9585B;
+
+
+            }
+
+        }
+
+
+    }
+    #menubuttons {
+        display: none;
+    }
+
+
+}
+footer {
+
+    background-color: #393939;
+    color: aliceblue;
+    height: 100px;
+    #footer {
+        @include flex-row-justifyspacebwtn();
+        width: 70rem;
+        height: 100%;
+        align-items: center;
+        margin: 0 auto;
+        #contact {
+            #contect-info {
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+// media
+@media screen and/*space*/
+(max-width:1000px) {
+    #navbar {
+        ul {
+            gap: 20px;
+        }
+        #authButtons {
+            gap: 20px;
+        }
+
+
+    }
+
+}
+@media screen and/*space*/
+(max-width:800px) {
+    #navbar {
+        ul {
+            @include flex-col-aligncenter();
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+            gap: 0;
+            background-color: white;
+            border-bottom: 1px solid $color-black;
+
+            li {
+                width: 100%;
+                @include flex-col-center();
+                padding: 15px 0;
+
+            }
+            #clearicon {
+                display: flex;
+                align-items: end;
+                mat-icon {
+                    font-size: 25px;
+                    padding: 0 10px;
+                }
+            }
+            #signin {
+                display: block;
+                text-align: center;
+            }
+            #signup {
+                display: block;
+                text-align: center;
+            }
+
+        }
+
+        #authButtons {
+            display: none;
+        }
+        #menubuttons {
+            @include flex-row-center();
+            cursor: pointer;
+
+        }
+
+
+    }
+
+}

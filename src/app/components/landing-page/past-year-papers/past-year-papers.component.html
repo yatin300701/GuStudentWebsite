@@ -1,0 +1,59 @@
+<!-- <pdf-viewer [src]="pdfSrc"
+[render-text]="true"
+[original-size]="false"
+style="width: 400px; height: 500px"
+></pdf-viewer> -->
+
+<h1>Past Year Papers Hub</h1>
+<p>
+  Your Gateway to Success: Access Previous Year Exam Papers and Excel in Your
+  Studies!
+</p>
+<div id="searchBarContainer">
+  <mat-form-field appearance="outline">
+    <!-- <mat-label>First name</mat-label> -->
+    <input matInput placeholder="Subject Name" />
+    <!-- <span matSuffix>Hab</span> -->
+    <mat-icon matSuffix>search</mat-icon>
+    <!-- <mat-icon matSuffix>search</mat-icon> -->
+  </mat-form-field>
+</div>
+<div id="filtersContainer">
+  <div>
+    <label>Select Course</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+  <div>
+    <label>Select Branch</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+  <div>
+    <label>Select Semester</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+</div>
+<div id="papersContainer">
+    <div>
+        <!-- cards -->
+        <div id="papers-card">
+            <app-ractangle-card></app-ractangle-card>
+            <app-ractangle-card></app-ractangle-card>
+        </div>
+    </div>
+
+</div>

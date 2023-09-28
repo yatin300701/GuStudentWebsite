@@ -1,0 +1,72 @@
+// sass variables
+@import "../landing-page.component.scss";
+
+// style
+h1{
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+p{
+    margin: 20px auto 40px auto;
+    text-align: center;
+    width: 518px;
+    font-weight: 500;
+}
+#searchBarContainer{
+    text-align: center;
+    mat-form-field{
+        width: 370px;
+    }
+
+}
+.mat-icon{
+    padding: 2px !important; 
+    border: 1px solid red;
+    border-radius: 7px;
+    margin: 0px 10px 7px 0px;
+    background: red;
+    color: white;
+
+    cursor: pointer;
+    // border: 1px solid rgb(223, 240, 255);
+    filter: drop-shadow(2px 2px 4px $color-red);
+}
+
+#filtersContainer{
+    padding: 30px;
+    margin-top: 30px;
+    border-top: 1px solid lavender;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    div{
+        select{
+            width: 200px;
+            height: 40px;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+::ng-deep #searchBarContainer .mdc-notched-outline__leading{
+        border-left: 1px solid  #cb271752;
+        border-top: 1px solid #cb271752;
+        border-bottom: 1px solid #cb271752;
+        border-radius: 10px 0px 0px 10px;
+} 
+::ng-deep #searchBarContainer .mdc-notched-outline__trailing{
+    border-right: 1px solid  #cb271752;
+    border-top: 1px solid #cb271752;
+    border-bottom: 1px solid #cb271752;
+    border-radius: 0px 10px 10px 0px;
+} 
+::ng-deep #searchBarContainer .mat-mdc-text-field-wrapper{
+    height: 48px;
+}
+
+// media style

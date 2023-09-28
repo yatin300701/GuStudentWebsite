@@ -1,0 +1,132 @@
+@import "../landing-page.component.scss";
+
+// style
+
+#heading {
+    width: 70rem;
+    margin: 0 auto;
+    height: 650px;
+
+    @include flex-row-center;
+    #heading-view {
+        #headder-img {
+            height: 400px;
+        }
+
+    }
+    #heading-description {
+        text-align: end;
+        h1 {
+            font-size: 30px;
+            font-weight: 900;
+            text-align: right;
+        }
+
+    }
+}
+#features {
+    background-color: #F2ECFF;
+
+    div {
+        @include flex-row-justifyspacebwtn;
+        align-items: center;
+        width: 70rem;
+        margin: 0 auto;
+        padding: 30px 0;    
+        div{
+            width: 440px;
+            display: flex;
+            justify-content: center;
+            div:first-child{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                @include flex-row-center;
+                text-align:center;
+                padding: 0px;
+                margin: 0px;
+                font-weight: 900;
+                box-shadow: #F2ECFF;
+            }
+            div:nth-child(2){
+                @include  flex-col-center;
+                width: 200px;
+                padding: 0px 13px;
+                margin: 0px;
+                h3{
+                    padding: 0px;
+                    margin: 0px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                p{
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+}
+
+#contribution {
+    width: 70rem;
+    margin: 0 auto;
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        p {
+            text-align: center
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+                margin-left: 20px
+            }
+        }
+    }
+}
+
+#signIn {
+    @include heading();
+    font-weight: 500;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    background-color: $color-red;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    width: 200px;
+
+    &:hover {
+        background-color: #F9585B;
+
+
+    }
+}
+
+#past-year-paper {
+    background-image: url("../../../../assets/papers.jpg");
+    background-size: cover;
+}
+#notes {
+    background-image: url("../../../../assets/book.jpg");
+    background-size: cover;
+}
+#web-dev {
+    background-image: url("../../../../assets/webdev.jpg");
+    background-size: cover;
+}
+
+// media
